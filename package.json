@@ -1,0 +1,23 @@
+{
+  "name": "arboparse",
+  "version": "1.0.0",
+  "description": "Arbo means tree in esperonto. Add parse. Arboparse",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "nyc mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drazisil/arboparse.git"
+  },
+  "author": "Drazi Crendraven <drazisil@users.noreply.github.com>",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/drazisil/arboparse/issues"
+  },
+  "homepage": "https://github.com/drazisil/arboparse#readme",
+  "dependencies": {
+    "mocha": "^9.2.2",
+    "nyc": "^15.1.0"
+  }
+}
