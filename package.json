@@ -1,6 +1,6 @@
 {
   "name": "arboparse",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Arbo means tree in esperonto. Add parse. Arboparse",
   "main": "lib/index.js",
   "scripts": {
