@@ -1,10 +1,24 @@
-const { ArboLex } = require("./lib/arbolex/ArboLex.js")
+const { ArboLex } = require("./lib/arbolex/ArboLex.js");
+const { printUsage, readFromStdin } = require("./lib/helpers/index.js");
 
-if (process.argv.length < 3) {
-    console.error(`usage: node lex.js <input>`)
-    process.exit(-1)
+async function main() {
+  /** @type {string[]} */
+  let input;
+
+  if (process.argv.length < 3) {
+    printUsage()
+    process.exit(-1);
+  }
+
+if (process.argv[2] === '--')  {
+    input = await readFromStdin()
+} else {
+    input = process.argv[2]
+} 
+
+  const newLexer = new ArboLex(input);
+
+  console.dir(newLexer.lex());
 }
 
-const newLexer = new ArboLex(process.argv[2])
-
-console.dir(newLexer.lex())
+main();

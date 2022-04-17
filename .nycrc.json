@@ -1,0 +1,12 @@
+{
+    "all": true,
+    "include": [
+        "lib"
+    ],
+    "reporter": [
+        "cobertura",
+        "html",
+        "text"
+    ],
+    "useSpawnWrap": true
+}
