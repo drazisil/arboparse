@@ -17,8 +17,10 @@
   },
   "homepage": "https://github.com/drazisil/arboparse#readme",
   "dependencies": {
+    "debug": "4.3.4",
     "mocha": "^9.2.2",
-    "nyc": "^15.1.0"
+    "nyc": "^15.1.0",
+    "supports-color": "9.2.2"
   },
   "devDependencies": {
     "@types/node": "16.11.27",
