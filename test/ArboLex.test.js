@@ -23,7 +23,6 @@ describe('ArboLex', function() {
         it('should be able to read a string', async function() {
             // Arrange
             const input = 'console.log("Hello, Arbo!")'
-            const expectedOutput = input.split('')
 
             // Act
             const newLexer = new ArboLex(input)
