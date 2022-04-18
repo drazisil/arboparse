@@ -12,10 +12,12 @@ describe('ArboLex', function() {
 
             // Act
             const newLexer = new ArboLex(input)
-            const outputString = (await newLexer.lex(isFile)).join('')
+            /** @type {string[]} */
+            const outputString = (await newLexer.lex(isFile))
 
             // Assert
-            assert.match(outputString, /feature/)
+            console.dir(outputString)
+            assert.ok(outputString.some(e => e.type === 'LineTerminator'))
 
         })
         it('should be able to read a string', async function() {
@@ -28,7 +30,8 @@ describe('ArboLex', function() {
             const output = await newLexer.lex()
 
             // Assert
-            assert.deepEqual(output, expectedOutput)
+            console.dir(output)
+            assert.ok(output.some(e => e.type === 'unknown: u0028'))
 
         })
         it('should throw an error when the input is invalid')
