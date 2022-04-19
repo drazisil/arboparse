@@ -17,7 +17,7 @@ describe('ArboLex', function() {
 
             // Assert
             console.dir(outputString)
-            assert.ok(outputString.some(e => e.type === 'LineTerminator'))
+            assert.ok(outputString.some(e => e.tokenSoFar === 'return'))
 
         })
         it('should be able to read a string', async function() {
@@ -30,7 +30,7 @@ describe('ArboLex', function() {
 
             // Assert
             console.dir(output)
-            assert.ok(output.some(e => e.type === 'unknown: u0028'))
+            assert.ok(output.some(e => e.tokenSoFar === '"Hello'))
 
         })
         it('should throw an error when the input is invalid')
