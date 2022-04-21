@@ -13,7 +13,8 @@ describe('ArboLex', function() {
             // Act
             const newLexer = new ArboLex(input)
             /** @type {import("../lib/arbolex/ArboLex.js").ArboToken[]} */
-            const outputString = (await newLexer.lex(isFile))
+            await newLexer.lex(isFile)
+            const outputString = newLexer.tokens
 
             // Assert
             console.dir(outputString)
@@ -26,7 +27,8 @@ describe('ArboLex', function() {
 
             // Act
             const newLexer = new ArboLex(input)
-            const output = await newLexer.lex()
+            await newLexer.lex()
+            const output = newLexer.tokens
 
             // Assert
             console.dir(output)
