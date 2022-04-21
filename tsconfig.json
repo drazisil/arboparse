@@ -1,5 +1,7 @@
 {
     "compilerOptions": {
+        "allowJs": true,
+        "checkJs": true,
         "strict": true,
         "noImplicitAny": true,
         "noImplicitThis": true,
@@ -9,10 +11,10 @@
         "jsx": "preserve",
         "strictNullChecks": true,
         "strictFunctionTypes": true,
-        "noEmit": true
+        "noEmit": true,
     },
     "exclude": [
+        "coverage",
         "node_modules",
-        "**/node_modules/*"
-    ]
+    ],
 }

@@ -2,8 +2,8 @@ const { ArboLex } = require("./lib/arbolex/ArboLex.js");
 const { printUsage, readFromStdin } = require("./lib/helpers/index.js");
 
 async function main() {
-  /** @type {string[]} */
-  let input;
+  /** @type {string} */
+  let input = '';
   let isFile = false;
 
   if (process.argv.length < 3) {

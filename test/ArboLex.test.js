@@ -12,7 +12,7 @@ describe('ArboLex', function() {
 
             // Act
             const newLexer = new ArboLex(input)
-            /** @type {string[]} */
+            /** @type {import("../lib/arbolex/ArboLex.js").ArboToken[]} */
             const outputString = (await newLexer.lex(isFile))
 
             // Assert
