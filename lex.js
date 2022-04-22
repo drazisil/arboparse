@@ -25,8 +25,9 @@ async function main() {
 
   const newLexer = new ArboLex(input);
 
-  // skipcq: JS-0002
+
   await newLexer.lex(isFile);
+  // skipcq: JS-0002
   console.log(newLexer.tokens)
 }
 

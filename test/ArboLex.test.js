@@ -3,9 +3,9 @@ const { describe } = require("mocha");
 const { ArboLex } = require("../lib/arbolex/ArboLex.js");
 
 
-describe('ArboLex', function() {
-    describe('#lex', function() {
-        it('should be able to read a file', async function() {
+describe('ArboLex', () => {
+    describe('#lex', () => {
+        it('should be able to read a file', async () => {
             // Arrange
             const input = 'test/fixtures/testJs.js'
             const isFile = true
@@ -21,7 +21,7 @@ describe('ArboLex', function() {
             assert.ok(outputString.some(e => e.value === 'const'))
 
         })
-        it('should be able to read a string', async function() {
+        it('should be able to read a string', async () => {
             // Arrange
             const input = 'console.log("Hello, Arbo!")'
 
