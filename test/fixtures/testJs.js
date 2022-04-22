@@ -1,4 +1,14 @@
-const env = process.features
+const env = process.features;
 
-// skipcq: JS-0002
-console.dir(env)
+/**
+ *
+ *
+ * @return {*} 
+ */
+function main() {
+  // skipcq: JS-0002
+  console.dir(env);
+  return;
+}
+
+main();

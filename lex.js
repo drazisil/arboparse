@@ -2,8 +2,8 @@ const { ArboLex } = require("./lib/arbolex/ArboLex.js");
 const { printUsage, readFromStdin } = require("./lib/helpers/index.js");
 
 async function main() {
-  /** @type {string[]} */
-  let input;
+  /** @type {string} */
+  let input = '';
   let isFile = false;
 
   if (process.argv.length < 3) {
@@ -25,8 +25,10 @@ async function main() {
 
   const newLexer = new ArboLex(input);
 
+
+  await newLexer.lex(isFile);
   // skipcq: JS-0002
-  console.dir(await newLexer.lex(isFile));
+  console.log(newLexer.tokens)
 }
 
 main();

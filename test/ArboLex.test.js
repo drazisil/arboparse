@@ -3,32 +3,36 @@ const { describe } = require("mocha");
 const { ArboLex } = require("../lib/arbolex/ArboLex.js");
 
 
-describe('ArboLex', function() {
-    describe('#lex', function() {
-        it('should be able to read a file', async function() {
+describe('ArboLex', () => {
+    describe('#lex', () => {
+        it('should be able to read a file', async () => {
             // Arrange
             const input = 'test/fixtures/testJs.js'
             const isFile = true
 
             // Act
             const newLexer = new ArboLex(input)
-            const outputString = (await newLexer.lex(isFile)).join('')
+            /** @type {import("../lib/arbolex/ArboLex.js").ArboToken[]} */
+            await newLexer.lex(isFile)
+            const outputString = newLexer.tokens
 
             // Assert
-            assert.match(outputString, /feature/)
+            console.dir(outputString)
+            assert.ok(outputString.some(e => e.value === 'const'))
 
         })
-        it('should be able to read a string', async function() {
+        it('should be able to read a string', async () => {
             // Arrange
             const input = 'console.log("Hello, Arbo!")'
-            const expectedOutput = input.split('')
 
             // Act
             const newLexer = new ArboLex(input)
-            const output = await newLexer.lex()
+            await newLexer.lex()
+            const output = newLexer.tokens
 
             // Assert
-            assert.deepEqual(output, expectedOutput)
+            console.dir(output)
+            assert.ok(output.some(e => e.value === 'H'))
 
         })
         it('should throw an error when the input is invalid')
