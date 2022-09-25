@@ -32,7 +32,7 @@ jobs:
     - name: Codecov
       # You may pin to the exact commit or the version.
       # uses: codecov/codecov-action@e3c560433a6cc60aec8812599b7844a7b4fa0d71
-      uses: codecov/codecov-action@v3.1.0
+      uses: codecov/codecov-action@v3.1.1
       with:
         # flags: # optional
         # Specify whether or not CI build should fail if Codecov runs into an error during upload
