@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/drazisil/arboparse#readme",
   "dependencies": {
-    "@types/debug": "^4.1.7",
+    "@types/debug": "^4.1.8",
     "@types/mocha": "^10.0.1",
     "@types/node": "^18.16.14",
     "debug": "^4.3.4",
