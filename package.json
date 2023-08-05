@@ -20,7 +20,7 @@
   "dependencies": {
     "@types/debug": "^4.1.8",
     "@types/mocha": "^10.0.1",
-    "@types/node": "^18.17.2",
+    "@types/node": "^18.17.3",
     "debug": "^4.3.4",
     "mocha": "^10.2.0",
     "nyc": "^15.1.0",
