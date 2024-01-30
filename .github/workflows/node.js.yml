@@ -32,7 +32,7 @@ jobs:
     - name: Codecov
       # You may pin to the exact commit or the version.
       # uses: codecov/codecov-action@e3c560433a6cc60aec8812599b7844a7b4fa0d71
-      uses: codecov/codecov-action@v3.1.5
+      uses: codecov/codecov-action@v3.1.6
       env: # Or as an environment variable
         CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
       with:
