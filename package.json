@@ -23,7 +23,7 @@
     "@types/node": "^20.14.2",
     "debug": "^4.3.5",
     "mocha": "^10.4.0",
-    "nyc": "^15.1.0",
+    "nyc": "^17.0.0",
     "supports-color": "9.4.0"
   },
   "devDependencies": {
