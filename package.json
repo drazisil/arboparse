@@ -22,7 +22,7 @@
     "@types/mocha": "^10.0.7",
     "@types/node": "^20.14.14",
     "debug": "^4.3.6",
-    "mocha": "^10.7.0",
+    "mocha": "^10.7.3",
     "nyc": "^17.0.0",
     "supports-color": "9.4.0"
   },
